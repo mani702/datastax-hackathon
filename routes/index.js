@@ -15,7 +15,7 @@ var router= express.Router();
 var app=express();
 app.set('view engine', 'ejs');
 const accountSid= 'ACbdd32c8d7d7f6c7581fd63995a1492e8';
-const authToken = '68dfc4539e6c42a53820ed8a732b306a';
+const authToken = '36f14029eeeaea007ff60743f15bcd52';
 const client = require('twilio')(accountSid, authToken);
 
 
@@ -207,6 +207,7 @@ router.post('/verified',async (req,res)=>{
 
 router.post('/code',async (req,res)=>{
     console.log(typeof(req.body.channel))
+    console.log("reqis"+req.body.phone)
     client.verify.services("VAe1b8f7b99f49ba0f66881346758b57f2").verifications.create({
          to: req.body.phone,
          channel: 'sms'
