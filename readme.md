@@ -11,7 +11,7 @@ Bus Transit is web application which enables the user to experience hassle free,
   - Automatic refunds
   
 # Installation 
-To install dependencies, delete node_modules folder
+To install dependencies, 
 
 ```sh
 npm install
